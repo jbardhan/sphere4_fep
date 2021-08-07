@@ -1,0 +1,11 @@
+package require psfgen
+topology /Users/jbardhan/Parameters/top_all22_prot_cmap.inp
+topology /Users/jbardhan/Parameters/neutralsod.rtf
+
+segment P {pdb latticeSphereProtein.pdb}
+coordpdb latticeSphereProtein.pdb P
+
+writepdb psfgenOutput.pdb
+writepsf psfgenOutput.psf
+
+quit

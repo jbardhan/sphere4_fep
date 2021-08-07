@@ -1,0 +1,91 @@
+mol new solvated.psf
+mol addfile solvated.pdb
+
+set qx 0.5
+set qy 0
+set qz 0
+set proteinatoms [atomselect top "not water"]
+set foundMatch 0
+foreach atom [$proteinatoms get {name segid resid x y z serial}] {
+	foreach {name segid resid x y z serial } $atom {break }
+	set distance [expr "sqrt(($x-$qx)**2+($y-$qy)**2+($z-$qz)**2)"]
+
+	if {$distance < 0.1} {
+	  set residuematch [atomselect top "resid $resid and segid $segid"]
+	  mol delete all
+	  break
+	}
+}
+
+set outfile [open "closestIndex.out" w]
+puts $outfile $serial
+quit
+
+set posres [string replace $name 0 0 "P"]
+set negres [string replace $name 0 0 "N"]
+
+package require psfgen
+topology /Users/jbardhan/Parameters/top_all22_prot_cmap.inp
+topology /Users/jbardhan/Parameters/neutralsod.rtf
+topology /Users/jbardhan/Parameters/allCharges.rtf
+
+segment P {pdb latticeSphereProtein.pdb
+mutate $resid $posres}
+coordpdb latticeSphereProtein.pdb P
+writepdb mutatedPosPsfgenOutput.pdb
+writepsf mutatedPosPsfgenOutput.psf
+package require solvate
+solvate mutatedPosPsfgenOutput.psf mutatedPosPsfgenOutput.pdb -t 10 -o mutatedPosSolvated
+
+resetpsf
+
+mol new mutatedPosSolvated.psf
+mol addfile mutatedPosSolvated.pdb
+
+set allatoms [atomselect top all]
+set proteinatoms [atomselect top "not water"]
+set notproteinatoms [atomselect top "water"]
+$proteinatoms set beta 1.00
+$notproteinatoms set beta 0.00
+$allatoms writepdb fixed.pdb
+
+set FEPresidue [atomselect top "not water and not resname NSR"]
+set notFEPresidue [atomselect top "water or resname NSR"]
+$FEPresidue set beta 1.00
+$notFEPresidue set beta 0.00
+$allatoms writepdb fepForwardPos.pdb
+
+mol delete all
+
+resetpsf
+
+segment N {pdb latticeSphereProtein.pdb
+mutate $resid $negres}
+coordpdb latticeSphereProtein.pdb N
+writepdb mutatedNegPsfgenOutput.pdb
+writepsf mutatedNegPsfgenOutput.psf
+package require solvate
+solvate mutatedNegPsfgenOutput.psf mutatedNegPsfgenOutput.pdb -t 10 -o mutatedNegSolvated
+
+
+resetpsf
+
+mol new mutatedNegSolvated.psf
+mol addfile mutatedNegSolvated.pdb
+
+set allatoms [atomselect top all]
+set proteinatoms [atomselect top "not water"]
+set notproteinatoms [atomselect top "water"]
+$proteinatoms set beta 1.00
+$notproteinatoms set beta 0.00
+$allatoms writepdb fixed.pdb
+
+set FEPresidue [atomselect top "not water and not resname NSR"]
+set notFEPresidue [atomselect top "water or resname NSR"]
+$FEPresidue set beta 1.00
+$notFEPresidue set beta 0.00
+$allatoms writepdb fepForwardNeg.pdb
+
+quit
+
+    
