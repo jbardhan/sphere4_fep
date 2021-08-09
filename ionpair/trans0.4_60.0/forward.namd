@@ -6,7 +6,7 @@ exclude                 scaled1-4
 
 
 # TOPOLOGY
-structure               solvated.psf
+structure               charged.psf
 
 # INITIAL CONDITIONS
 coordinates             solvated.pdb
