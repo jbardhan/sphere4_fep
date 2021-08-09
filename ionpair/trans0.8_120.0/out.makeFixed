@@ -1,0 +1,45 @@
+Info) VMD for LINUXAMD64, version 1.9.3 (December 1, 2016)
+Info) http://www.ks.uiuc.edu/Research/vmd/                         
+Info) Email questions and bug reports to vmd@ks.uiuc.edu           
+Info) Please include this reference in published work using VMD:   
+Info)    Humphrey, W., Dalke, A. and Schulten, K., `VMD - Visual   
+Info)    Molecular Dynamics', J. Molec. Graphics 1996, 14.1, 33-38.
+Info) -------------------------------------------------------------
+Info) Multithreading available, 2 CPUs detected.
+Info) Free system memory: 7007MB (88%)
+Info) Dynamically loaded 2 plugins in directory:
+Info) /home/bard415/lib/vmd/plugins/LINUXAMD64/molfile
+Info) Using plugin psf for structure file solvated.psf
+psfplugin) WARNING: no dihedrals defined in PSF file.
+psfplugin) WARNING: no impropers defined in PSF file.
+psfplugin) no cross-terms defined in PSF file.
+Info) Analyzing structure ...
+Info)    Atoms: 3838
+Info)    Bonds: 1092
+Info)    Angles: 546  Dihedrals: 0  Impropers: 0  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 2746
+Info)    Waters: 546
+Info)    Segments: 2
+Info)    Fragments: 2746   Protein: 0   Nucleic: 0
+0
+Info) Using plugin pdb for coordinates from file solvated.pdb
+Info) Finished with coordinate file solvated.pdb.
+0
+atomselect0
+2200
+atomselect1
+1638
+atomselect2
+Info) Opened coordinate file fixed.pdb for writing.
+Info) Finished with coordinate file fixed.pdb.
+psfplugin) Writing angles/dihedrals/impropers...
+Info) Opened coordinate file fixed.psf for writing.
+Info) Finished with coordinate file fixed.psf.
+file4
+{-13.498000144958496 -13.397000312805176 -13.303999900817871} {13.447999954223633 13.411999702453613 13.486000061035156}
+-13.498000144958496 -13.397000312805176 -13.303999900817871
+13.447999954223633 13.411999702453613 13.486000061035156
+Info) VMD for LINUXAMD64, version 1.9.3 (December 1, 2016)
+Info) Exiting normally.
+vmd > 

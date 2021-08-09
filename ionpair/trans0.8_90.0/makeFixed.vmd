@@ -1,0 +1,28 @@
+mol new solvated.psf
+mol addfile solvated.pdb
+
+set proteinatoms [atomselect top "resname NSR"]
+$proteinatoms num
+set solventatoms [atomselect top "not resname NSR"]
+$solventatoms num
+
+$proteinatoms set beta 1.00
+$solventatoms set beta 0.00
+
+set all [atomselect top all]
+$all writepdb fixed.pdb
+$all writepsf fixed.psf
+
+set outfile [open boxinfo.txt w]
+puts $outfile "Center:"
+puts $outfile [measure center $all]
+puts $outfile "Size:"
+set foo [measure minmax $all]
+set lower [lindex $foo 0]
+set upper [lindex $foo 1]
+puts $outfile [expr "[lindex $upper 0] - [lindex $lower 0]"]
+puts $outfile [expr "[lindex $upper 1] - [lindex $lower 1]"]
+puts $outfile [expr "[lindex $upper 2] - [lindex $lower 2]"]
+
+quit
+
