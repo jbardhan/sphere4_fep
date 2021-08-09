@@ -6,7 +6,7 @@ Info)    Humphrey, W., Dalke, A. and Schulten, K., `VMD - Visual
 Info)    Molecular Dynamics', J. Molec. Graphics 1996, 14.1, 33-38.
 Info) -------------------------------------------------------------
 Info) Multithreading available, 2 CPUs detected.
-Info) Free system memory: 7036MB (88%)
+Info) Free system memory: 7035MB (88%)
 Info) Dynamically loaded 2 plugins in directory:
 Info) /home/bard415/lib/vmd/plugins/LINUXAMD64/molfile
 0
@@ -52,10 +52,8 @@ Info)    Fragments: 642   Protein: 0   Nucleic: 0
 Info) Finished with coordinate file solvated.pdb.
 0
 atomselect0
-ERROR) syntax error
-atomselect: cannot parse selection text: serial not 1245
-can't read "notChargeAtom": no such variable
 atomselect1
+atomselect2
 Info) Opened coordinate file solvated.fep for writing.
 Info) Finished with coordinate file solvated.fep.
 Info) VMD for LINUXAMD64, version 1.9.3 (December 1, 2016)

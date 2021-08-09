@@ -52,10 +52,8 @@ Info)    Fragments: 638   Protein: 0   Nucleic: 0
 Info) Finished with coordinate file solvated.pdb.
 0
 atomselect0
-ERROR) syntax error
-atomselect: cannot parse selection text: serial not 1245
-can't read "notChargeAtom": no such variable
 atomselect1
+atomselect2
 Info) Opened coordinate file solvated.fep for writing.
 Info) Finished with coordinate file solvated.fep.
 Info) VMD for LINUXAMD64, version 1.9.3 (December 1, 2016)

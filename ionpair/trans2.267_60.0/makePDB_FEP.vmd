@@ -1,7 +1,7 @@
 mol new 
 mol addfile solvated.pdb
-set chargeAtom [atomselect top "serial 1245"]
-set notChargeAtom [atomselect top "serial not 1245"]
+set chargeAtom [atomselect top "serial 2104 or serial 2105"]
+set notChargeAtom [atomselect top "not (serial 2104 or serial 2105)"]
 $chargeAtom set beta 1.00
 $notChargeAtom set beta 0.00
 set all [atomselect top all]
