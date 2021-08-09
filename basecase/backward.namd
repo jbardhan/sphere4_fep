@@ -1,18 +1,18 @@
 set temp                300.0
-parameters              $env(HOME)/Parameters/par_all27_prot_lipid_more.prm
+parameters              $env(HOME)/repos/parameters/par_all27_prot_lipid_more.prm
 paraTypeCharmm          on
 exclude                 scaled1-4
 1-4scaling              1.0
 
 
 # TOPOLOGY
-structure               positive.psf
+structure               solvated.psf
 
 # INITIAL CONDITIONS
 coordinates             solvated.pdb
-bincoordinates          equilPos.coor
-binvelocities           equilPos.vel
-extendedSystem          equilPos.xsc
+bincoordinates          forward.coor
+binvelocities           forward.vel
+extendedSystem          forward.xsc
 
 # OUTPUT FREQUENCIES
 outputenergies          100
@@ -23,8 +23,8 @@ XSTFreq                 100
 
 
 # OUTPUT AND RESTART
-outputname              forwardPos
-restartname             forwardPos
+outputname              backward
+restartname             backward
 binaryoutput            yes
 binaryrestart           yes
 
@@ -98,12 +98,12 @@ commotion               no
 
 
 # FEP PARAMETERS
-source                  $env(HOME)/Parameters/fep.tcl
+source                  $env(HOME)/repos/parameters/fep.tcl
 alch                    on
 alchType                FEP
 alchFile                solvated.fep
 alchCol                 B
-alchOutFile             forwardPos.fepout
+alchOutFile             backward.fepout
 alchOutFreq             10
 alchVdwLambdaEnd        0.0
 alchElecLambdaStart     0.0
@@ -113,4 +113,4 @@ alchEquilSteps          1000
 set numSteps            8000
 
 
-runFEP 0 1 0.02 $numSteps
+runFEP 1 0 -0.02 $numSteps

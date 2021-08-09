@@ -1,5 +1,5 @@
 set temp                300.0
-parameters              $env(HOME)/Parameters/par_all27_prot_lipid_more.prm
+parameters              $env(HOME)/repos/parameters/par_all27_prot_lipid_more.prm
 paraTypeCharmm          on
 exclude                 scaled1-4
 1-4scaling              1.0
@@ -21,8 +21,8 @@ XSTFreq                 100
 
 
 # OUTPUT AND RESTART
-outputname              equilNeg
-restartname             equilNeg
+outputname              equil
+restartname             equil
 binaryoutput            yes
 binaryrestart           yes
 
@@ -92,12 +92,12 @@ rigiditerations         400
 commotion               no
 
 # FEP PARAMETERS
-source                  $env(HOME)/Parameters/fep.tcl
+source                  $env(HOME)/repos/parameters/fep.tcl
 alch                    on
 alchType                FEP
 alchFile                solvated.fep
 alchCol                 B
-alchOutFile             equilNeg.fepout
+alchOutFile             equil.fepout
 alchOutFreq             1000
 alchVdwLambdaEnd        0.0
 alchElecLambdaStart     0.0
