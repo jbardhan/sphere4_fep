@@ -1,0 +1,61 @@
+Info) VMD for LINUXAMD64, version 1.9.3 (December 1, 2016)
+Info) http://www.ks.uiuc.edu/Research/vmd/                         
+Info) Email questions and bug reports to vmd@ks.uiuc.edu           
+Info) Please include this reference in published work using VMD:   
+Info)    Humphrey, W., Dalke, A. and Schulten, K., `VMD - Visual   
+Info)    Molecular Dynamics', J. Molec. Graphics 1996, 14.1, 33-38.
+Info) -------------------------------------------------------------
+Info) Multithreading available, 2 CPUs detected.
+Info) Free system memory: 6958MB (87%)
+Info) Dynamically loaded 2 plugins in directory:
+Info) /home/bard415/lib/vmd/plugins/LINUXAMD64/molfile
+0
+Info) Using plugin pdb for structure file solvated.pdb
+Info) Using plugin pdb for coordinates from file solvated.pdb
+Info) Determining bond structure from distance search ...
+ERROR) MolAtom 769: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 780: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 781: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 962: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 973: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 974: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 1155: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 1166: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 1167: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 1357: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 769: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 780: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 781: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 962: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 973: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 974: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 1155: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 1166: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 1167: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 1357: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 973: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 974: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 1155: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 1166: Exceeded maximum number of bonds (12).
+ERROR) MolAtom 1167: Exceeded maximum number of bonds (12).
+ERROR) BaseMolecule: Excessive bonding errors encountered, perhaps atom coordinates are in the wrong units?
+ERROR) BaseMolecule: Silencing bonding error messages.
+Info) Analyzing structure ...
+Info)    Atoms: 3838
+Info)    Bonds: 14096
+Info)    Angles: 0  Dihedrals: 0  Impropers: 0  Cross-terms: 0
+Info)    Bondtypes: 0  Angletypes: 0  Dihedraltypes: 0  Impropertypes: 0
+Info)    Residues: 913
+Info)    Waters: 546
+Info)    Segments: 2
+Info)    Fragments: 641   Protein: 0   Nucleic: 0
+Info) Finished with coordinate file solvated.pdb.
+0
+atomselect0
+atomselect1
+atomselect2
+Info) Opened coordinate file solvated.fep for writing.
+Info) Finished with coordinate file solvated.fep.
+Info) VMD for LINUXAMD64, version 1.9.3 (December 1, 2016)
+Info) Exiting normally.
+vmd > 

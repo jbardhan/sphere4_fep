@@ -6,7 +6,7 @@ Info)    Humphrey, W., Dalke, A. and Schulten, K., `VMD - Visual
 Info)    Molecular Dynamics', J. Molec. Graphics 1996, 14.1, 33-38.
 Info) -------------------------------------------------------------
 Info) Multithreading available, 2 CPUs detected.
-Info) Free system memory: 7035MB (88%)
+Info) Free system memory: 6955MB (87%)
 Info) Dynamically loaded 2 plugins in directory:
 Info) /home/bard415/lib/vmd/plugins/LINUXAMD64/molfile
 1.6.4
